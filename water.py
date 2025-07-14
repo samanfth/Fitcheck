@@ -527,7 +527,7 @@ def main():
     print("🤖 ربات در حال اجراست...")
     app.run_polling()
     
-    if __name__ == '__main__':
+if __name__ == '__main__':
     threading.Thread(target=run_web).start()
     main()
 
