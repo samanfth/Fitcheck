@@ -40,7 +40,7 @@ DIETS = {
     'obese': 'diet_images/obese.jpg',
 }
 
-FONT_PATH = "C:/Windows/Fonts/tahoma.ttf"
+FONT_PATH = "Vazir.ttf"
 font_prop = font_manager.FontProperties(fname=FONT_PATH)
 
 def plot_bmi_chart(bmi):
