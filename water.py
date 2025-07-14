@@ -2,6 +2,9 @@ import logging
 import os
 import matplotlib.pyplot as plt
 import arabic_reshaper
+import uvicorn
+import threading
+from fastapi import FastAPI
 from bidi.algorithm import get_display
 from matplotlib import font_manager
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
@@ -10,6 +13,15 @@ from telegram.ext import (
     ContextTypes, ConversationHandler, filters
 )
 
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "FitCheck Bot is alive!"}
+
+def run_web():
+    uvicorn.run(app, host="0.0.0.0", port=10000)
+    
 logging.basicConfig(level=logging.INFO)
 
 # مراحل گفتگو
@@ -514,6 +526,10 @@ def main():
 
     print("🤖 ربات در حال اجراست...")
     app.run_polling()
+    
+    if __name__ == '__main__':
+    threading.Thread(target=run_web).start()
+    main()
 
 if __name__ == '__main__':
     main()
