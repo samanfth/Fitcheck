@@ -34,10 +34,10 @@ logging.basicConfig(level=logging.INFO)
 ) = range(19)
 
 DIETS = {
-    'underweight': 'diet_images/underweight.jpg',
-    'normal': 'diet_images/normal.jpg',
-    'overweight': 'diet_images/overweight.jpg',
-    'obese': 'diet_images/obese.jpg',
+    'underweight': 'underweight.jpg',
+    'normal': 'normal.jpg',
+    'overweight': 'overweight.jpg',
+    'obese': 'obese.jpg',
 }
 
 FONT_PATH = "Vazir.ttf"
