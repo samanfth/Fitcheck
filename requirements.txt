@@ -2,3 +2,6 @@ python-telegram-bot==20.6
 matplotlib
 arabic-reshaper
 python-bidi
+httpx
+uvicorn
+fastapi
